@@ -23,7 +23,7 @@
   "keywords": [
     "vite",
     "vite-plugin",
-    "react-remote-attributes"
+    "react-remove-attributes"
   ],
   "scripts": {
     "dev": "npm run build -- --watch",
