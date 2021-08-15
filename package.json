@@ -1,0 +1,30 @@
+{
+  "name": "vite-plugin-react-remove-attributes",
+  "version": "1.0.0",
+  "description": "A Vite-Plugin for React to remove Attributes on bundling",
+  "author": "Lambert",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "react-remote-attributes"
+  ],
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsup src/index.ts --dts --format cjs,esm"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "prettier": "^2.3.2",
+    "tsup": "^4.13.1",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.4"
+  },
+  "peerDependencies": {
+    "vite": "^2.4.4"
+  }
+}
