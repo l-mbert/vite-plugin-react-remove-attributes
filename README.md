@@ -33,7 +33,7 @@ npm i -D vite-plugin-react-remove-attributes
 ```js
 import { defineConfig } from 'vite';
 
-import VitePluginReactRemoveAttributes from '../src/index';
+import VitePluginReactRemoveAttributes from 'vite-plugin-react-remove-attributes';
 
 export default defineConfig({
   plugins: [
