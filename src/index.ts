@@ -12,7 +12,7 @@ export default function VitePluginReactRemoveAttributes(options: Options): Plugi
           'g'
         );
 
-        src = src.replaceAll(attributeMatcher, '');
+        src = src.replace(attributeMatcher, '');
       });
 
       return {
