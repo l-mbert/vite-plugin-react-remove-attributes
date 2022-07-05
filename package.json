@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-react-remove-attributes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vite-Plugin for React to remove Attributes on bundling",
   "author": "Lambert",
   "license": "MIT",
