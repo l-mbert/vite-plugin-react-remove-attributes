@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     VitePluginReactRemoveAttributes({
       attributes: ['data-testid'],
-      include: './src/*.(ts|tsx)',
     }),
   ],
 });

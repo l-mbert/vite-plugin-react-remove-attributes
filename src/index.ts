@@ -5,8 +5,12 @@ import { walk } from 'estree-walker';
 import type { Plugin } from 'vite';
 import type { Options } from './types';
 
-export default function VitePluginReactRemoveAttributes(options: Options): Plugin {
-  const filterValidFile = createFilter(options.include, options.exclude);
+export default function VitePluginReactRemoveAttributes({
+  include = [/\.[cm]?[tj]sx?$/],
+  exclude = ['**/node_modules/**'],
+  attributes,
+}: Options): Plugin {
+  const filterValidFile = createFilter(include, exclude);
 
   return {
     name: 'vite-plugin-react-remove-attributes',
@@ -23,7 +27,7 @@ export default function VitePluginReactRemoveAttributes(options: Options): Plugi
                 node.type === 'Property' &&
                 'key' in node &&
                 node.key.type == 'Literal' &&
-                options.attributes.includes(node.key.value)
+                attributes.includes(node.key.value)
               ) {
                 this.remove();
               }

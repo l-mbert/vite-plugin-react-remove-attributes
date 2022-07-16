@@ -1,6 +1,6 @@
 # vite-plugin-react-remove-attributes
 
-## !!! NOT ALL CASES TESTED YET, USE WITH CARE !!!
+## !!! NOT ALL CASES TESTED YET, USE WITH CARE
 
 ---
 
@@ -30,7 +30,9 @@ npm i -D vite-plugin-react-remove-attributes
 
 ## Usage
 
-You must define which `attributes` are to be removed together with the files to `include` in the parsing process. Optionally you can define files that must be excluded with the optional `exclude` parameter. Both `include` and `exclude` are documented [here](https://github.com/rollup/plugins/tree/master/packages/pluginutils#createfilter).
+You must define which `attributes` are to be removed in the parsing process. Optionally you can define files that must be included/excluded with the optional `include`/`exclude` parameters. Both `include` and `exclude` are documented [here](https://github.com/rollup/plugins/tree/master/packages/pluginutils#createfilter).
+
+By default, `include` is defined to read all files in the vite/rollup pipeline that end with `.(mjs|cjs|js|jsx|mts|cts|ts|tsx)` and `exclude` is set to ignore `**/node_modules/**`.
 
 ```js
 import { defineConfig } from 'vite';
@@ -41,7 +43,6 @@ export default defineConfig({
   plugins: [
     VitePluginReactRemoveAttributes({
       attributes: ['ATTRIBUTES TO REMOVE'],
-      include: 'match/to/files.(ts|tsx|js|jsx)',
     }),
   ],
 });
