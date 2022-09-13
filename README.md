@@ -47,3 +47,29 @@ export default defineConfig({
   ],
 });
 ```
+
+## Options
+
+### attributes
+
+**type:** `string[]`
+
+**require**
+
+### include
+
+**type:** `string[]`
+
+**default:** `[/\.[cm]?[tj]sx?$/]`
+
+### exclude
+
+**type:** `string[]`
+
+**default:** `['**/node_modules/**']`
+
+### enabled
+
+**type:** `boolean`
+
+**default:** `true`
